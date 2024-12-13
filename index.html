@@ -8,191 +8,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <style>
-        /* تحسين التصميم العام */
-        body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #f3f4f6;
-            color: #333;
-            line-height: 1.6;
-        }
+        /* بقية الأكواد هنا... */
 
-        /* شريط التنقل */
-        nav {
-            background-color: #004aad;
-            color: white;
-            padding: 1em 2em;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        nav .logo {
-            font-size: 1.8em;
-            font-weight: bold;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 1.5em;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.1em;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #ffd700;
-        }
-
-        /* قسم الترحيب */
-        .hero {
-            text-align: center;
-            padding: 8em 2em;
-            background: linear-gradient(to bottom right, #004aad, #0073e6);
-            color: white;
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-        }
-
-        .hero h1 {
-            font-size: 3.5em;
-            margin-bottom: 0.5em;
-        }
-
-        .hero p {
-            font-size: 1.5em;
-            margin-bottom: 1.5em;
-        }
-
-        .hero button {
-            background-color: #ffd700;
-            color: #004aad;
-            border: none;
-            padding: 0.8em 2em;
-            font-size: 1.1em;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .hero button:hover {
-            background-color: #e6b800;
-        }
-
-        /* قسم الخدمات */
-        .services {
-            padding: 4em 2em;
-            background-color: #f3f4f6;
-            text-align: center;
-        }
-
-        .services h2 {
-            font-size: 2.5em;
-            margin-bottom: 1em;
-            color: #004aad;
-        }
-
-        .cards {
-            display: flex;
-            gap: 2em;
-            justify-content: center;
-            margin-top: 2em;
-            overflow: hidden;
-        }
-
-        .card {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            padding: 1.5em;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-        }
-
-        .card img {
-            max-width: 100%;
-            border-radius: 8px;
-            margin-bottom: 1em;
-        }
-
-        .card h3 {
-            margin: 1em 0 0.5em;
-            color: #004aad;
-        }
-
-        .card p {
-            font-size: 1em;
-            color: #555;
-        }
-
-        .card button {
-            background-color: #004aad;
-            color: white;
-            border: none;
-            padding: 0.7em 1.5em;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-top: 1em;
-        }
-
-        .card button:hover {
-            background-color: #00337f;
-        }
-
-        /* قسم عنّا */
-        .about {
-            padding: 4em 2em;
-            background-color: #ffffff;
-            text-align: center;
-        }
-
-        .about h2 {
-            font-size: 2.5em;
-            margin-bottom: 1em;
-            color: #004aad;
-        }
-
-        .about p {
-            font-size: 1.2em;
-            color: #555;
-            max-width: 800px;
+        .slider {
+            max-width: 1200px;
             margin: 0 auto;
-            line-height: 1.8;
-        }
-
-        /* التذييل */
-        footer {
-            background-color: #002d6d;
-            color: white;
-            text-align: center;
-            padding: 2em 1em;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 1em;
-        }
-
-        footer a {
-            color: #00aaff;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
         }
     </style>
 </head>
@@ -246,4 +66,40 @@
             <div class="card">
                 <img src="https://via.placeholder.com/300x200" alt="صورة الخدمة">
                 <h3>إدارة مشاريع</h3>
-                <p>إدارة احترافية لمشاريع
+                <p>إدارة احترافية لمشاريعك لتحقيق النجاح المطلوب.</p>
+                <button>اقرأ المزيد</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- التذييل -->
+    <footer>
+        <p>&copy; 2024 جميع الحقوق محفوظة. <a href="#">موقعي الاحترافي</a></p>
+    </footer>
+
+    <!-- استدعاء مكتبة jQuery ومكتبة Slick -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.slider').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: true,
+                dots: true,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+</body>
+</html>

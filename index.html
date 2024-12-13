@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>موقعي الاحترافي</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <style>
         /* تحسين التصميم العام */
         body {
@@ -100,10 +102,10 @@
 
         .cards {
             display: flex;
-            flex-wrap: wrap;
             gap: 2em;
             justify-content: center;
             margin-top: 2em;
+            overflow: hidden;
         }
 
         .card {
@@ -216,7 +218,7 @@
     <!-- قسم الخدمات -->
     <div class="services" id="services">
         <h2>خدماتنا</h2>
-        <div class="cards">
+        <div class="cards slider">
             <div class="card">
                 <img src="https://via.placeholder.com/300x200" alt="صورة الخدمة">
                 <h3>تصميم مواقع</h3>
@@ -235,21 +237,13 @@
                 <p>استشارات لمساعدتك على اتخاذ قرارات تقنية أفضل.</p>
                 <button>اقرأ المزيد</button>
             </div>
-        </div>
-    </div>
-
-    <!-- قسم عنّا -->
-    <div class="about" id="about">
-        <h2>من نحن</h2>
-        <p>
-            نحن فريق من المحترفين المتخصصين في تقديم خدمات تقنية متكاملة
-            تساعد الشركات والأفراد على تحقيق أهدافهم.
-        </p>
-    </div>
-
-    <!-- التذييل -->
-    <footer>
-        <p>&copy; 2024 جميع الحقوق محفوظة. <a href="#">سياسة الخصوصية</a></p>
-    </footer>
-</body>
-</html>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" alt="صورة الخدمة">
+                <h3>تحليل بيانات</h3>
+                <p>تحليلات دقيقة تساعدك على فهم بياناتك بشكل أفضل.</p>
+                <button>اقرأ المزيد</button>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" alt="صورة الخدمة">
+                <h3>إدارة مشاريع</h3>
+                <p>إدارة احترافية لمشاريع

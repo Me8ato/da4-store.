@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقعي المحسن</title>
+    <title>موقعي الاحترافي</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* تحسين التصميم العام */
@@ -12,66 +12,98 @@
             font-family: 'Arial', sans-serif;
             background-color: #f3f4f6;
             color: #333;
+            line-height: 1.6;
         }
 
         /* شريط التنقل */
         nav {
             background-color: #004aad;
             color: white;
-            padding: 1em;
+            padding: 1em 2em;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         nav .logo {
-            font-size: 1.5em;
+            font-size: 1.8em;
             font-weight: bold;
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            gap: 1em;
-        }
-
-        nav ul li {
-            display: inline;
+            gap: 1.5em;
         }
 
         nav ul li a {
             color: white;
             text-decoration: none;
-            font-size: 1em;
+            font-size: 1.1em;
+            transition: color 0.3s;
         }
 
         nav ul li a:hover {
-            text-decoration: underline;
+            color: #ffd700;
         }
 
-        /* محتوى الصفحة */
+        /* قسم الترحيب */
         .hero {
             text-align: center;
-            padding: 5em 2em;
+            padding: 8em 2em;
             background: linear-gradient(to bottom right, #004aad, #0073e6);
             color: white;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         }
 
         .hero h1 {
-            font-size: 3em;
+            font-size: 3.5em;
             margin-bottom: 0.5em;
         }
 
         .hero p {
-            font-size: 1.2em;
+            font-size: 1.5em;
+            margin-bottom: 1.5em;
         }
 
-        /* البطاقات */
+        .hero button {
+            background-color: #ffd700;
+            color: #004aad;
+            border: none;
+            padding: 0.8em 2em;
+            font-size: 1.1em;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .hero button:hover {
+            background-color: #e6b800;
+        }
+
+        /* قسم الخدمات */
+        .services {
+            padding: 4em 2em;
+            background-color: #f3f4f6;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 2.5em;
+            margin-bottom: 1em;
+            color: #004aad;
+        }
+
         .cards {
             display: flex;
+            flex-wrap: wrap;
             gap: 2em;
             justify-content: center;
-            padding: 2em;
+            margin-top: 2em;
         }
 
         .card {
@@ -79,21 +111,28 @@
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             width: 300px;
-            padding: 1em;
+            padding: 1.5em;
             text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
         }
 
         .card img {
             max-width: 100%;
             border-radius: 8px;
+            margin-bottom: 1em;
         }
 
         .card h3 {
             margin: 1em 0 0.5em;
+            color: #004aad;
         }
 
         .card p {
-            font-size: 0.9em;
+            font-size: 1em;
             color: #555;
         }
 
@@ -101,7 +140,7 @@
             background-color: #004aad;
             color: white;
             border: none;
-            padding: 0.5em 1em;
+            padding: 0.7em 1.5em;
             border-radius: 4px;
             cursor: pointer;
             margin-top: 1em;
@@ -111,18 +150,38 @@
             background-color: #00337f;
         }
 
+        /* قسم عنّا */
+        .about {
+            padding: 4em 2em;
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2.5em;
+            margin-bottom: 1em;
+            color: #004aad;
+        }
+
+        .about p {
+            font-size: 1.2em;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
         /* التذييل */
         footer {
             background-color: #002d6d;
             color: white;
             text-align: center;
-            padding: 1em;
-            margin-top: 2em;
+            padding: 2em 1em;
         }
 
         footer p {
             margin: 0;
-            font-size: 0.9em;
+            font-size: 1em;
         }
 
         footer a {
@@ -138,41 +197,54 @@
 <body>
     <!-- شريط التنقل -->
     <nav>
-        <div class="logo">موقعي</div>
+        <div class="logo">موقعي الاحترافي</div>
         <ul>
-            <li><a href="#">الرئيسية</a></li>
-            <li><a href="#">من نحن</a></li>
-            <li><a href="#">الخدمات</a></li>
-            <li><a href="#">اتصل بنا</a></li>
+            <li><a href="#hero">الرئيسية</a></li>
+            <li><a href="#services">الخدمات</a></li>
+            <li><a href="#about">عنّا</a></li>
+            <li><a href="#contact">اتصل بنا</a></li>
         </ul>
     </nav>
 
     <!-- قسم الترحيب -->
-    <div class="hero">
-        <h1>مرحباً بك في موقعي</h1>
-        <p>نحن هنا لتقديم أفضل الخدمات لك</p>
+    <div class="hero" id="hero">
+        <h1>مرحباً بك في موقعي الاحترافي</h1>
+        <p>نقدم لك خدمات متميزة وحلول مبتكرة لمستقبلك</p>
+        <button>تعرف علينا</button>
     </div>
 
-    <!-- قسم البطاقات -->
-    <div class="cards">
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200" alt="صورة الخدمة">
-            <h3>خدمتنا الأولى</h3>
-            <p>وصف قصير للخدمة التي نقدمها.</p>
-            <button>اقرأ المزيد</button>
+    <!-- قسم الخدمات -->
+    <div class="services" id="services">
+        <h2>خدماتنا</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" alt="صورة الخدمة">
+                <h3>تصميم مواقع</h3>
+                <p>نحن نقدم حلول تصميم المواقع الحديثة والمتجاوبة.</p>
+                <button>اقرأ المزيد</button>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" alt="صورة الخدمة">
+                <h3>تطوير تطبيقات</h3>
+                <p>تطبيقات عالية الجودة تناسب احتياجاتك.</p>
+                <button>اقرأ المزيد</button>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" alt="صورة الخدمة">
+                <h3>استشارات تقنية</h3>
+                <p>استشارات لمساعدتك على اتخاذ قرارات تقنية أفضل.</p>
+                <button>اقرأ المزيد</button>
+            </div>
         </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200" alt="صورة الخدمة">
-            <h3>خدمتنا الثانية</h3>
-            <p>وصف قصير للخدمة التي نقدمها.</p>
-            <button>اقرأ المزيد</button>
-        </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200" alt="صورة الخدمة">
-            <h3>خدمتنا الثالثة</h3>
-            <p>وصف قصير للخدمة التي نقدمها.</p>
-            <button>اقرأ المزيد</button>
-        </div>
+    </div>
+
+    <!-- قسم عنّا -->
+    <div class="about" id="about">
+        <h2>من نحن</h2>
+        <p>
+            نحن فريق من المحترفين المتخصصين في تقديم خدمات تقنية متكاملة
+            تساعد الشركات والأفراد على تحقيق أهدافهم.
+        </p>
     </div>
 
     <!-- التذييل -->

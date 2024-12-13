@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <style>
-        /* التصميم العام */
+        /* تحسين التصميم العام */
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
@@ -32,7 +32,7 @@
         }
 
         nav .logo {
-            font-size: 1.5em;
+            font-size: 1.8em;
             font-weight: bold;
         }
 
@@ -45,7 +45,7 @@
         nav ul li a {
             color: white;
             text-decoration: none;
-            font-size: 1em;
+            font-size: 1.1em;
             transition: color 0.3s;
         }
 
@@ -63,12 +63,12 @@
         }
 
         .hero h1 {
-            font-size: 2.5em;
+            font-size: 3.5em;
             margin-bottom: 0.5em;
         }
 
         .hero p {
-            font-size: 1.2em;
+            font-size: 1.5em;
             margin-bottom: 1.5em;
         }
 
@@ -95,7 +95,7 @@
         }
 
         .services h2 {
-            font-size: 2em;
+            font-size: 2.5em;
             margin-bottom: 1em;
             color: #004aad;
         }
@@ -160,13 +160,13 @@
         }
 
         .about h2 {
-            font-size: 2em;
+            font-size: 2.5em;
             margin-bottom: 1em;
             color: #004aad;
         }
 
         .about p {
-            font-size: 1em;
+            font-size: 1.2em;
             color: #555;
             max-width: 800px;
             margin: 0 auto;
@@ -194,63 +194,56 @@
         footer a:hover {
             text-decoration: underline;
         }
-
-        /* تصميم متجاوب */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2em;
-            }
-
-            .hero p {
-                font-size: 1em;
-            }
-
-            .cards {
-                flex-direction: column;
-                gap: 1.5em;
-            }
-
-            .card {
-                width: 100%;
-            }
-
-            nav ul {
-                flex-direction: column;
-                gap: 1em;
-                align-items: flex-start;
-            }
-
-            nav ul li a {
-                font-size: 0.9em;
-            }
-        }
     </style>
 </head>
 <body>
-    <!-- المحتوى هنا كما هو... -->
-    <!-- إضافة مكتبة jQuery و Slick -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('.slider').slick({
-                infinite: true,
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 2000,
-                arrows: true,
-                dots: true,
-                responsive: [
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 1
-                        }
-                    }
-                ]
-            });
-        });
-    </script>
-</body>
-</html>
+    <!-- شريط التنقل -->
+    <nav>
+        <div class="logo">موقعي الاحترافي</div>
+        <ul>
+            <li><a href="#hero">الرئيسية</a></li>
+            <li><a href="#services">الخدمات</a></li>
+            <li><a href="#about">عنّا</a></li>
+            <li><a href="#contact">اتصل بنا</a></li>
+        </ul>
+    </nav>
+
+    <!-- قسم الترحيب -->
+    <div class="hero" id="hero">
+        <h1>مرحباً بك في موقعي الاحترافي</h1>
+        <p>نقدم لك خدمات متميزة وحلول مبتكرة لمستقبلك</p>
+        <button>تعرف علينا</button>
+    </div>
+
+    <!-- قسم الخدمات -->
+    <div class="services" id="services">
+        <h2>خدماتنا</h2>
+        <div class="cards slider">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" alt="صورة الخدمة">
+                <h3>تصميم مواقع</h3>
+                <p>نحن نقدم حلول تصميم المواقع الحديثة والمتجاوبة.</p>
+                <button>اقرأ المزيد</button>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" alt="صورة الخدمة">
+                <h3>تطوير تطبيقات</h3>
+                <p>تطبيقات عالية الجودة تناسب احتياجاتك.</p>
+                <button>اقرأ المزيد</button>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" alt="صورة الخدمة">
+                <h3>استشارات تقنية</h3>
+                <p>استشارات لمساعدتك على اتخاذ قرارات تقنية أفضل.</p>
+                <button>اقرأ المزيد</button>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" alt="صورة الخدمة">
+                <h3>تحليل بيانات</h3>
+                <p>تحليلات دقيقة تساعدك على فهم بياناتك بشكل أفضل.</p>
+                <button>اقرأ المزيد</button>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" alt="صورة الخدمة">
+                <h3>إدارة مشاريع</h3>
+                <p>إدارة احترافية لمشاريع
